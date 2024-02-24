@@ -22,7 +22,7 @@ export default function AppRouter() {
         }).then((res) => {
             response_json = {
                 request_data: body,
-                result: success,
+                result: "success",
                 code: res.status,
                 data: res.json()
             }
