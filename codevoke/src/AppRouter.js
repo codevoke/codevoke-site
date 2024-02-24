@@ -8,13 +8,14 @@ export default function AppRouter() {
     // var port = window.location.port;
     var subdomen = hostname.replace(HOSTNAME_WITHOUT_PODDOMENS, "");
 
-    if (subdomen == "api.") {
+    if (subdomen === "api.") {
         var response_json = null;
         const urlParams = new URLSearchParams(window.location.search);
         var method = urlParams.get('method')
         var endpoint = urlParams.get("endpoint")
         var body = urlParams.get("body")
-        const response = fetch(SERVER_URL + endpoint, {
+        
+        fetch(SERVER_URL + endpoint, {
             method: method.toUpperCase(),
             headers: {"Content-Type": "application/json"},
             body: body
