@@ -39,7 +39,7 @@ export default function AppRouter() {
         return (
             <pre>
                 <code>
-                    ${response_json}
+                    {JSON.stringify(response_json)}
                 </code>
             </pre>
         )
