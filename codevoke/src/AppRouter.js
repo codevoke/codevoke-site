@@ -1,4 +1,3 @@
-import { use } from "react";
 import App from "./App"
 
 const HOSTNAME_WITHOUT_PODDOMENS = "codevoke.ru";
@@ -6,7 +5,7 @@ const SERVER_URL = "https://server.com/";  // for exm
 
 export default function AppRouter() {
     var hostname = window.location.host;
-    var port = window.location.port;
+    // var port = window.location.port;
     var subdomen = hostname.replace(HOSTNAME_WITHOUT_PODDOMENS, "");
 
     if (subdomen == "api.") {
@@ -43,5 +42,5 @@ export default function AppRouter() {
         `;
     }
     else
-        return (<App />);
+        return (<App subdomen={subdomen} />);
 }
