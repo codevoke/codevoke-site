@@ -36,11 +36,13 @@ export default function AppRouter() {
             }
         })
 
-        return `
-            <pre><code>
-                ${response_json}
-            </pre></code>
-        `;
+        return (
+            <pre>
+                <code>
+                    ${response_json}
+                </code>
+            </pre>
+        )
     }
     else
         return (<App subdomen={subdomen} />);
